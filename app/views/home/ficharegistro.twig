@@ -1,0 +1,65 @@
+{% extends "partials/layout.twig" %}
+{% block content %}
+    <form method="post" action="{{ 'home/guardar'|url }}">
+        <div class="alert-container"></div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">NOMBRE</label>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                    <input type="text" class="form-control" name="nombre"
+                           placeholder="Nombre">
+                </div>
+                <span data-key="nombre" class="form-validation-failed"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">DESCRIPCION</label>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                    <input type="text" class="form-control" name="descripcion"
+                           placeholder="descripcion">
+                </div>
+                <span data-key="descripcion" class="form-validation-failed"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">PRECIO</label>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                    <input type="text" class="form-control" name="precio"
+                           placeholder="Precio  0.0">
+                </div>
+                <span data-key="precio" class="form-validation-failed"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">DESCUENTO</label>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                    <input type="text" class="form-control" name="descuento"
+                           placeholder="Descuento 0.0">
+                </div>
+                <span data-key="descuento" class="form-validation-failed"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">IMAGEN</label>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                    <input type="text" class="form-control" name="imagen"
+                           placeholder="URL de la Imagen" >
+                </div>
+                <span data-key="imagen" class="form-validation-failed"></span>
+            </div>
+        </div>
+        <div class="form-group pull-right">
+            <button class="btn btn-primary" type="submit"
+                    data-ajax="true">Guardar</button>
+        </div>
+    </form>
+{% endblock %}

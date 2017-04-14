@@ -1,0 +1,23 @@
+{% extends "partials/layout.twig" %}
+
+{% block content %}
+    <div class="row">
+        <a href="{{ 'home/ficharegistro'|url }}" class="btn btn-primary"> Nuevo Producto</a>
+    </div>
+    <hr class="hidden-xs"/>
+    {% for item in datos %}
+        <div class="hidden-xs col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    <img style="width: 70%" src="{{ item.simagen }}" alt="David" class="img-circle" />
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">{{ item.sdescripcion }}</li>
+                    <li class="list-group-item">Precio: $ {{ item.dprecio }}</li>
+                    <li class="list-group-item">Descuento: $ {{ item.ddescuento }}</li>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+    <hr class="hidden-xs"/>
+{% endblock %}
